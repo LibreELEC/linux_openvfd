@@ -1,5 +1,7 @@
 # Linux OpenVFD
 
+**License Note** This is the LibreELEC fork of Arthur Libermans linux_openvfd driver. It is intentionally forked at a point in time when the codebase was "GPL-2.0-or-later" as marked in openvfd_drv.c (at the time, this is the only file in the repo marked with license). In commit `d753dd2` the creator has applied a GPLv3 license, thus rendering the linux_openvfd driver license incompatible with the GPL-2.0 (only) Linux kernel. We also note that intial commit `f8bd53c` imports existing code from another author who would need to endorse such a license change. In the event of a license rethink we will be happy to change our upstream source. Until then, this repo will remain kernel compatible, and we welcome user pull-requests to add additional config files.
+
 This repository contains source code for the FD628 ([datasheet](http://pdf1.alldatasheet.com/datasheet-pdf/view/232882/PTC/PT6964.html)) and similar LED display controllers. The FD628 is often used in Android TV boxes with a 7-segment display. Although the FD628 has support for a multitude of configurations the current implementation supports only common cathode and common anode displays with 7 segments. The driver can also support the FD650 which uses a variation of the I2C communication protocol and HD44780 text-based LCD displays using an I2C backpack.
 
 Displays are configured from userspace using a device-specific .conf that identifies the GPIO pins connected to the display controller and different visual and electrical layouts that need to be set.
